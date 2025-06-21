@@ -1,0 +1,5 @@
+kubectl run new-ping-pod \
+  --image=busybox:latest \
+  --dry-run=client \
+  -o yaml > new-ping-pod.yaml \
+  --command -- ping -c 60 google.com
